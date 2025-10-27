@@ -1,7 +1,8 @@
 # Fake News Detection ML Application
 A Flask app for fake news classification using a Naive Bayes approach deployed using AWS Elastic Beanstalk.
 
-
+#### Project Structure
+```
 fake-news-ml/
 ├── .ebextensions/
 │   ├── 00_application.config
@@ -13,3 +14,4 @@ fake-news-ml/
 ├── .gitattributes
 ├── application.py
 └── readme.md
+```
