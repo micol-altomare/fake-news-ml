@@ -19,7 +19,7 @@ API_URL = "http://fakenewsml-env.eba-3zhcmbjj.us-east-2.elasticbeanstalk.com/"
 # Test sentences
 TEST_CASES = {
     "fake1": {
-        "text": "This is fake news.",
+        "text": "Last month, Google acquired OpenAI for a whopping $600 billion.",
         "label": "FAKE"
     },
     "fake2": {
@@ -27,7 +27,7 @@ TEST_CASES = {
         "label": "FAKE"
     },
     "real1": {
-        "text": "This is real news.",
+        "text": "Ocean acidification has significantly increased since the mid 1700s.",
         "label": "REAL"
     },
     "real2": {

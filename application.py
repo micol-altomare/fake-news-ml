@@ -185,7 +185,7 @@ def predict_form():
             model_loaded=bool(_loaded_model is not None and _vectorizer is not None),
             model_path=MODEL_PATH,
             prediction=None,
-            error="Field 'message' is required and must be non-empty.",
+            error="Enter some text first!",
         ), 400
     try:
         label = _predict_text(message)

@@ -26,10 +26,10 @@ fake-news-ml/
 #### Average Latency Results
 | Test Case | Average Latency (ms) |
 |-----------|----------------------|
-| Fake  1 | 102.38                |
-| Fake  2 | 100.07                |
-| Real  1 | 100.31                |
-| Real  2 | 103.97                |
+| Fake  1 | 101.57                |
+| Fake  2 | 102.72                |
+| Real  1 | 102.02                |
+| Real  2 | 104.08                |
 
 #### Boxplot of Latencies (_showing outliers_)
 ![Latency Boxplot](test_results/latency_boxplot.png)
