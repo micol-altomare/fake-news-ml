@@ -72,41 +72,22 @@ def functional_test():
                 
                 print(f"Predicted: {predicted_label}")
                 print(f"Status: {status}")
-                
-                results.append({
-                    "test_id": test_id,
-                    "expected": test_data["label"],
-                    "predicted": predicted_label,
-                    "passed": passed,
-                    "status_code": response.status_code
-                })
+                results.append(True)
+
             else:
                 print(f"FAIL - Status code: {response.status_code}")
                 print(f"Response: {response.text}")
-                results.append({
-                    "test_id": test_id,
-                    "expected": test_data["label"],
-                    "predicted": "ERROR",
-                    "passed": False,
-                    "status_code": response.status_code
-                })
+                results.append(False)
         
         except Exception as e:
             print(f"FAIL - Error: {e}")
-            results.append({
-                "test_id": test_id,
-                "expected": test_data["label"],
-                "predicted": "ERROR",
-                "passed": False,
-                "status_code": "N/A"
-            })
-    
+            results.append(False)
+
     # Summary
     print("\n" + "="*60)
     print("FUNCTIONAL TEST SUMMARY")
     print("="*60)
-    passed = sum(1 for r in results if r["passed"])
-    print(f"Passed: {passed}/{len(results)}")
+    print(f"Passed: {sum(results)}/{len(results)}")
     
     return results
 
@@ -195,7 +176,7 @@ def generate_boxplots(all_latencies):
     
     # Create boxplot, display outliers
     fig, ax = plt.subplots(figsize=(8, 6))
-    bp = ax.boxplot(data_to_plot, labels=labels, showfliers=True)
+    bp = ax.boxplot(data_to_plot, tick_labels=labels, showfliers=True)
 
     # Labels, title, grid
     ax.set_xlabel('Test Case')
