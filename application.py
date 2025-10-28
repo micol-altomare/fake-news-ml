@@ -145,6 +145,11 @@ DEMO_HTML = """
             Prediction: {{ prediction }}
         </div>
         {% endif %}
+        {% if error %}
+        <div class="error">
+            Error: {{ error }}
+        </div>
+        {% endif %}
     </body>
 </html>
 """
